@@ -11,9 +11,7 @@
 		body {
 			font-family: "Lucida Console", Monaco, monospace;
 			background-color: #121212;
-			/* Dark background */
 			color: #e0e0e0;
-			/* Light text */
 			margin: 0;
 			padding: 0;
 			line-height: 1.6;
@@ -21,7 +19,6 @@
 
 		a {
 			color: #4caf50;
-			/* Bright green for links */
 			text-decoration: none;
 		}
 
@@ -35,6 +32,12 @@
 			border-bottom: 1px solid #333;
 		}
 
+		.content {
+			max-width: 800px;
+			margin: 0 auto;
+			padding: 0 20px;
+		}
+
 		header p {
 			margin: 0;
 			text-align: center;
@@ -43,18 +46,27 @@
 		}
 
 		nav {
+			width: 100%;
+			background-color: #1e1e1e;
+			padding: 10px 0;
 			text-align: center;
-			margin-top: 10px;
 		}
 
 		nav a {
 			margin: 0 15px;
 			font-size: 1em;
+			color: #4caf50;
+		}
+
+		nav a:hover {
+			text-decoration: underline;
 		}
 
 		.content {
 			max-width: 800px;
-			margin: 40px auto;
+			margin-top: 20px;
+			/* Removed extra spacing */
+			margin: 0 auto;
 			padding: 0 20px;
 		}
 
@@ -65,21 +77,6 @@
 		h3 {
 			margin-top: 30px;
 			color: #4caf50;
-		}
-
-		.paper {
-			margin-bottom: 20px;
-		}
-
-		.authors span {
-			color: #e0e0e0;
-			/* Default text color */
-		}
-
-		.authors .highlight {
-			color: #4caf50;
-			/* Highlight color */
-			font-weight: bold;
 		}
 
 		footer {
@@ -97,12 +94,14 @@
 	<header>
 		<p>Quantum Computing Research & Blog</p>
 		<nav>
-			<a href="index.html">Home</a>
-			<a href="blog/">Blog</a>
-			<a href="contact.html">Contact</a>
+			<a href="#home">Home</a>
+			<a href="#papers">Papers</a>
+			<a href="#faqs">FAQs</a>
+			<a href="#blog">Blog</a>
+			<a href="#contact">Contact</a>
 		</nav>
 	</header>
-	<div class="content">
+	<div class="content" id="home">
 		<h2>Welcome</h2>
 		<p>Hi, I’m Adithya Sireesh (Adi), a 1<sup>st</sup>-year PhD student at the <a
 				href="https://www.quantumsoftwarelab.com/">Quantum Software Lab</a>, Edinburgh. I explore topics in Quantum
@@ -111,7 +110,7 @@
 			bridge standalone research in error correction and fault tolerance with practical applications in quantum
 			computing/algorithms.</p>
 
-		<h3>Selected Works</h3>
+		<h3 id="papers">Selected Works</h3>
 		<ul>
 			<li>
 				<p><a href="https://arxiv.org/abs/2407.20167">Measurement-based uncomputation of quantum circuits for modular
@@ -137,7 +136,41 @@
 					runtimes (16% decrease) at moderate qubit overheads (12% increase).</p>
 			</li>
 		</ul>
-		<footer>
+		<h3 id="faqs">FAQs (for the uninitiated)</h3>
+
+		<h4>What is Quantum Computing?</h4>
+		<p>Quantum computing represents a groundbreaking shift in computation, harnessing the principles of quantum
+			mechanics to perform tasks that would be difficult or impossible for classical computers. While classical
+			computers use bits that can only be in one of two states (0 or 1), quantum computers use quantum bits, or qubits,
+			which can exist in a superposition of states. This allows quantum computers to represent and process information
+			in fundamentally different ways, enabling them to solve certain problems much faster than classical machines.</p>
+
+		<h4>What are the Challenges Current Quantum Computers Face?</h4>
+		<p>Despite the immense potential of quantum computing, there are significant challenges that need to be addressed
+			for the technology to become practical. The most prominent challenge is <strong>Decoherence:</strong>. Quantum
+			information is fragile and can be easily disturbed by external factors,
+			such as temperature fluctuations or electromagnetic radiation, causing the quantum state to collapse or lose its
+			coherence. Qubits can also get entangled with the environment. The process of applying gates to qubits, a
+			fundamental requirement for quantum computation, can itself introduce errors, and these errors can accumulate over
+			time, leading to inaccuracies in the final result.</p>
+
+		<h4>What is Quantum Error Correction?</h4>
+		<p>Quantum error correction (QEC) is a vital technique developed to overcome the challenges of noise and decoherence
+			in quantum computers. QEC aims to protect quantum information from errors without directly measuring and
+			collapsing the quantum state. It involves encoding quantum data in a redundant way, using multiple qubits to
+			represent a single "logical" qubit. This redundancy allows for errors to be detected and corrected during
+			computation.
+		</p>
+
+		<p>By incorporating error correction into quantum algorithms, we can create <strong>fault-tolerant quantum
+				algorithms</strong>—algorithms that can continue to function correctly even in the presence of errors. These
+			fault-tolerant algorithms ensure the reliability and accuracy of quantum computations, enabling practical and
+			scalable quantum computing.</p>
+
+
+
+		<h3 id="blog">Blog</h3>
+		<footer id="contact">
 			&copy; 2024 Adithya Sireesh | <a href="mailto:adithya.sireesh@gmail.com"><i class="fas fa-envelope"
 					style="font-size: 24px; color: #4caf50;"></i></a>
 			<a href="https://x.com/Adithya_Sireesh" target="_blank">
@@ -150,7 +183,6 @@
 				<i class="ai ai-google-scholar-square ai-3x" style="font-size: 24px; color: #4caf50; margin-left: 10px;"></i>
 			</a>
 		</footer>
-
 </body>
 
 </html>
