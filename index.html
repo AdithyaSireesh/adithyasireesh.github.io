@@ -1,108 +1,140 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Quantum Computing Research</title>
-    <style>
-        body {
-            font-family: "Lucida Console", Monaco, monospace;
-            background-color: #121212; /* Dark background */
-            color: #e0e0e0; /* Light text */
-            margin: 0;
-            padding: 0;
-            line-height: 1.6;
-        }
-        a {
-            color: #4caf50; /* Bright green for links */
-            text-decoration: none;
-        }
-        a:hover {
-            text-decoration: underline;
-        }
-        header {
-            padding: 20px;
-            background-color: #1e1e1e;
-            border-bottom: 1px solid #333;
-        }
-        header p {
-            margin: 0;
-            text-align: center;
-            font-size: 1.2em;
-            color: #888;
-        }
-        nav {
-            text-align: center;
-            margin-top: 10px;
-        }
-        nav a {
-            margin: 0 15px;
-            font-size: 1em;
-        }
-        .content {
-            max-width: 800px;
-            margin: 40px auto;
-            padding: 0 20px;
-        }
-        h2 {
-            color: #4caf50;
-        }
-        h3 {
-            margin-top: 30px;
-            color: #4caf50;
-        }
-        .paper {
-            margin-bottom: 20px;
-        }
-        .authors span {
-            color: #e0e0e0; /* Default text color */
-        }
-        .authors .highlight {
-            color: #4caf50; /* Highlight color */
-            font-weight: bold;
-        }
-        footer {
-            text-align: center;
-            padding: 20px;
-            background-color: #1e1e1e;
-            color: #888;
-            font-size: 0.9em;
-            border-top: 1px solid #333;
-        }
-    </style>
-</head>
-<body>
-    <header>
-        <p>Quantum Computing Research & Blog</p>
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="blog/">Blog</a>
-            <a href="contact.html">Contact</a>
-        </nav>
-    </header>
-    <div class="content">
-        <h2>Welcome</h2>
-        <p>Hi, I’m Adithya Sireesh (Adi), a \( 1^{\text{st}} \)-year PhD student at the <a href="https://www.quantumsoftwarelab.com/">Quantum Software Lab</a>, Edinburgh. I explore topics in Quantum Error Correction, Quantum Resource Estimation, and the optimization of Fault-Tolerant Quantum Algorithms. My research focuses on reducing the resource overheads required for fault-tolerant quantum computation. I aim to bridge standalone research in error correction and fault tolerance with practical applications in quantum computing/algorithms.</p>
-        
-        <h3>Selected Works</h3>
-        <div class="paper">
-            <p><a href="https://arxiv.org/abs/2407.20167">Measurement-based uncomputation of quantum circuits for modular arithmetic</a></p>
-            <p class="authors">
-                Authors: Alessandro Luongo, Antonio Michele Miti, Varun Narasimhachar, <span class="highlight">Adithya Sireesh</span>
-            </p>
-            <p>Summary: Measurement-based uncomputation (MBU) is a technique for probabilistic uncomputation in quantum circuits. We explore how this technique can be used to reduce the fault-tolerance costs of commonly used arithmetic subroutines in quantum algorithms.</p>
-        </div>
 
-        <div class="paper">
-            <p><a href="link-to-research2">Optimizing Windowed Arithmetic for Quantum Attacks Against RSA-2048</a></p>
-            <p class="authors">
-                Authors: Alessandro Luongo, Varun Narasimhachar, <span class="highlight">Adithya Sireesh</span>
-            </p>
-            <p>Summary: Windowed arithmetic (<a href="https://arxiv.org/abs/1905.07682">[Gid19]</a>) reduces quantum arithmetic costs by trading space for time via memory lookups to precomputed tables. We introduce optimizations to cut the cost of uncomputing memory lookups by 50% asymptotically and minimize required lookups for modular exponentiation. These improvements reduce gate costs for quantum factoring and cryptographic attacks by 1.5%–3.4%, enabling faster runtimes (16% decrease) at moderate qubit overheads (12%).</p>
-        </div>
-    </div>
-    <footer>
-        &copy; 2024 Adithya Sireesh | <a href="mailto:adithya.sireesh@gmail.com">adithya.sireesh@gmail.com</a>
-    </footer>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Quantum Computing Research</title>
+	<style>
+		body {
+			font-family: "Lucida Console", Monaco, monospace;
+			background-color: #121212;
+			/* Dark background */
+			color: #e0e0e0;
+			/* Light text */
+			margin: 0;
+			padding: 0;
+			line-height: 1.6;
+		}
+
+		a {
+			color: #4caf50;
+			/* Bright green for links */
+			text-decoration: none;
+		}
+
+		a:hover {
+			text-decoration: underline;
+		}
+
+		header {
+			padding: 20px;
+			background-color: #1e1e1e;
+			border-bottom: 1px solid #333;
+		}
+
+		header p {
+			margin: 0;
+			text-align: center;
+			font-size: 1.2em;
+			color: #888;
+		}
+
+		nav {
+			text-align: center;
+			margin-top: 10px;
+		}
+
+		nav a {
+			margin: 0 15px;
+			font-size: 1em;
+		}
+
+		.content {
+			max-width: 800px;
+			margin: 40px auto;
+			padding: 0 20px;
+		}
+
+		h2 {
+			color: #4caf50;
+		}
+
+		h3 {
+			margin-top: 30px;
+			color: #4caf50;
+		}
+
+		.paper {
+			margin-bottom: 20px;
+		}
+
+		.authors span {
+			color: #e0e0e0;
+			/* Default text color */
+		}
+
+		.authors .highlight {
+			color: #4caf50;
+			/* Highlight color */
+			font-weight: bold;
+		}
+
+		footer {
+			text-align: center;
+			padding: 20px;
+			background-color: #1e1e1e;
+			color: #888;
+			font-size: 0.9em;
+			border-top: 1px solid #333;
+		}
+	</style>
+</head>
+
+<body>
+	<header>
+		<p>Quantum Computing Research & Blog</p>
+		<nav>
+			<a href="index.html">Home</a>
+			<a href="blog/">Blog</a>
+			<a href="contact.html">Contact</a>
+		</nav>
+	</header>
+	<div class="content">
+		<h2>Welcome</h2>
+		<p>Hi, I’m Adithya Sireesh (Adi), a 1<sup>st</sup>-year PhD student at the <a
+				href="https://www.quantumsoftwarelab.com/">Quantum Software Lab</a>, Edinburgh. I explore topics in Quantum
+			Error Correction, Quantum Resource Estimation, and the optimization of Fault-Tolerant Quantum Algorithms. My
+			research focuses on reducing the resource overheads required for fault-tolerant quantum computation. I aim to
+			bridge standalone research in error correction and fault tolerance with practical applications in quantum
+			computing/algorithms.</p>
+
+		<h3>Selected Works</h3>
+		<ul>
+			<li>
+				<p><a href="https://arxiv.org/abs/2407.20167">Measurement-based uncomputation of quantum circuits for modular
+						arithmetic</a></p>
+				<p class="authors">
+					Authors: Alessandro Luongo, Antonio Michele Miti, Varun Narasimhachar, <span class="highlight">Adithya
+						Sireesh</span>
+				</p>
+				<p>Summary: Measurement-based uncomputation (MBU) is a technique for probabilistic uncomputation in quantum
+					circuits. We explore how this technique can be used to reduce the fault-tolerance costs of commonly used
+					arithmetic subroutines in quantum algorithms.</p>
+			</li>
+			<li>
+				<p><a href="link-to-research2">Optimizing Windowed Arithmetic for Quantum Attacks against RSA-2048</a></p>
+				<p class="authors">
+					Authors: Alessandro Luongo, Varun Narasimhachar, <span class="highlight">Adithya Sireesh</span>
+				</p>
+				<p>Summary: Windowed arithmetic is a powerful technique for reducing the costs of quantum arithmetic circuits by
+					leveraging space-time trade-offs with memory lookups to precomputed tables. We introduce several
+					optimizations, achieving up to a 50% cost reduction in uncomputing memory lookups for quantum factoring.</p>
+			</li>
+		</ul>
+		<footer>
+			&copy; 2024 Adithya Sireesh | <a href="mailto:adithya.sireesh@gmail.com">adithya.sireesh@gmail.com</a>
+		</footer>
 </body>
+
 </html>
